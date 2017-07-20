@@ -1,5 +1,5 @@
 feature 'View hit comfirmation' do
-  scenario 'confimr player 2 hit' do
+  scenario 'confirm player 2 hit' do
     sign_in_and_play
     visit('/play')
     find_button('Attack').click
