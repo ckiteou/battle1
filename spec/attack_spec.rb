@@ -1,13 +1,13 @@
-class Attack
-  def initialize(player)
-    @player = player
-  end
+require 'attack'
 
-  def self.run(player)
-    new(player).run
-  end
+describe Attack do
+  subject(:object) { described_class }
+  let(:player) { double :player }
 
-  def run
-    @player.receive_damage
+  describe '.run' do
+    it 'damages the player' do
+      expect(player).to receive(:receive_damage)
+      object.run(player)
+    end
   end
 end
