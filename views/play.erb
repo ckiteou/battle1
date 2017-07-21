@@ -2,6 +2,7 @@
   <div style="font-family: Arial; background: #00b7ff; padding: 1em 4em 1em 4em; margin-top: 3em; border-radius: 20px;">
     <h1><%= @game.player_1.name %><span style="font-size: 0.4em; padding: 0 3em 0 3em;">Vrs</span><%= @game.player_2.name %></h1>
     <p class="hit"><%= @game.player_1.name %>: <%= @game.player_2.hit_points %>HP</p>
+    <p><%= @game.current_turn.name %>'s turn</p>
   </div>
   <div style="margin-top: 2em;">
     <form action="/attack">
